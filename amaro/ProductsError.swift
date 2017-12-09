@@ -10,6 +10,7 @@ import Foundation
 
 enum ProductsError: Error {
     case notFound
+    case loadError
 }
 
 extension ProductsError: LocalizedError {
@@ -17,6 +18,8 @@ extension ProductsError: LocalizedError {
         switch self {
         case .notFound:
             return NSLocalizedString("No products found", comment: "Products not found")
+        case .loadError:
+            return NSLocalizedString("Couldn't load products file", comment: "Couldn't load")
         }
     }
 }
