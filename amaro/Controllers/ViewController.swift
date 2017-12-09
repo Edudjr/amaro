@@ -14,7 +14,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         ProductsStore.sharedInstance.getProducts(page: 1) { (data, error) in
-            //
+            //print(data)
+        }
+        
+        ProductsStore.sharedInstance.getProductsOnSale(page: 1) { (data, error) in
+            //print(data)
         }
     }
 
