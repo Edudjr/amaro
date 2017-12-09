@@ -11,6 +11,7 @@ import Foundation
 enum ProductsError: Error {
     case notFound
     case loadError
+    case convertionError(fromString: String?, toType: String)
 }
 
 extension ProductsError: LocalizedError {
@@ -20,6 +21,8 @@ extension ProductsError: LocalizedError {
             return NSLocalizedString("No products found", comment: "Products not found")
         case .loadError:
             return NSLocalizedString("Couldn't load products", comment: "Couldn't load")
+        case .convertionError(let fromType, let toType):
+            return NSLocalizedString("Couldn't convert \(String(describing: fromType)) to \(toType)", comment: "Convertion error")
         }
     }
 }
