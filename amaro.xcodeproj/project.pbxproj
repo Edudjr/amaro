@@ -13,6 +13,12 @@
 		93102CD61FDB896B0073B2D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93102CD51FDB896B0073B2D1 /* Assets.xcassets */; };
 		93102CD91FDB896B0073B2D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93102CD71FDB896B0073B2D1 /* LaunchScreen.storyboard */; };
 		93102CE41FDB896B0073B2D1 /* amaroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102CE31FDB896B0073B2D1 /* amaroTests.swift */; };
+		93102CF31FDB8FFC0073B2D1 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 93102CF21FDB8FFC0073B2D1 /* products.json */; };
+		93102CF41FDB8FFC0073B2D1 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 93102CF21FDB8FFC0073B2D1 /* products.json */; };
+		93102CF71FDB92380073B2D1 /* ProductsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102CF61FDB92380073B2D1 /* ProductsStore.swift */; };
+		93102CF81FDB92380073B2D1 /* ProductsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102CF61FDB92380073B2D1 /* ProductsStore.swift */; };
+		93102CFB1FDB93730073B2D1 /* ProductsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102CFA1FDB93730073B2D1 /* ProductsError.swift */; };
+		93102CFC1FDB93730073B2D1 /* ProductsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102CFA1FDB93730073B2D1 /* ProductsError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +32,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93102CCB1FDB896B0073B2D1 /* amaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93102CCE1FDB896B0073B2D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93102CD01FDB896B0073B2D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93102CD31FDB896B0073B2D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93102CD51FDB896B0073B2D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93102CD81FDB896B0073B2D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93102CDA1FDB896B0073B2D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93102CDF1FDB896B0073B2D1 /* amaroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = amaroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93102CE31FDB896B0073B2D1 /* amaroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = amaroTests.swift; sourceTree = "<group>"; };
 		93102CE51FDB896B0073B2D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93102CF01FDB8F560073B2D1 /* amaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93102CF11FDB8F560073B2D1 /* amaroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = amaroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93102CF21FDB8FFC0073B2D1 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		93102CF61FDB92380073B2D1 /* ProductsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsStore.swift; sourceTree = "<group>"; };
+		93102CFA1FDB93730073B2D1 /* ProductsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,27 +70,21 @@
 			children = (
 				93102CCD1FDB896B0073B2D1 /* amaro */,
 				93102CE21FDB896B0073B2D1 /* amaroTests */,
-				93102CCC1FDB896B0073B2D1 /* Products */,
+				93102CF01FDB8F560073B2D1 /* amaro.app */,
+				93102CF11FDB8F560073B2D1 /* amaroTests.xctest */,
 			);
-			sourceTree = "<group>";
-		};
-		93102CCC1FDB896B0073B2D1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				93102CCB1FDB896B0073B2D1 /* amaro.app */,
-				93102CDF1FDB896B0073B2D1 /* amaroTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		93102CCD1FDB896B0073B2D1 /* amaro */ = {
 			isa = PBXGroup;
 			children = (
+				93102CFE1FDB95440073B2D1 /* Views */,
+				93102CFD1FDB952E0073B2D1 /* Controllers */,
+				93102CF91FDB93550073B2D1 /* Helpers */,
+				93102CF51FDB917E0073B2D1 /* Stores */,
+				93102CEF1FDB8E6F0073B2D1 /* Resources */,
 				93102CCE1FDB896B0073B2D1 /* AppDelegate.swift */,
-				93102CD01FDB896B0073B2D1 /* ViewController.swift */,
-				93102CD21FDB896B0073B2D1 /* Main.storyboard */,
 				93102CD51FDB896B0073B2D1 /* Assets.xcassets */,
-				93102CD71FDB896B0073B2D1 /* LaunchScreen.storyboard */,
 				93102CDA1FDB896B0073B2D1 /* Info.plist */,
 			);
 			path = amaro;
@@ -94,6 +97,47 @@
 				93102CE51FDB896B0073B2D1 /* Info.plist */,
 			);
 			path = amaroTests;
+			sourceTree = "<group>";
+		};
+		93102CEF1FDB8E6F0073B2D1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93102CF21FDB8FFC0073B2D1 /* products.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		93102CF51FDB917E0073B2D1 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				93102CF61FDB92380073B2D1 /* ProductsStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		93102CF91FDB93550073B2D1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				93102CFA1FDB93730073B2D1 /* ProductsError.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		93102CFD1FDB952E0073B2D1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93102CD01FDB896B0073B2D1 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		93102CFE1FDB95440073B2D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93102CD71FDB896B0073B2D1 /* LaunchScreen.storyboard */,
+				93102CD21FDB896B0073B2D1 /* Main.storyboard */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,7 +157,7 @@
 			);
 			name = amaro;
 			productName = amaro;
-			productReference = 93102CCB1FDB896B0073B2D1 /* amaro.app */;
+			productReference = 93102CF01FDB8F560073B2D1 /* amaro.app */;
 			productType = "com.apple.product-type.application";
 		};
 		93102CDE1FDB896B0073B2D1 /* amaroTests */ = {
@@ -131,7 +175,7 @@
 			);
 			name = amaroTests;
 			productName = amaroTests;
-			productReference = 93102CDF1FDB896B0073B2D1 /* amaroTests.xctest */;
+			productReference = 93102CF11FDB8F560073B2D1 /* amaroTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -164,7 +208,7 @@
 				Base,
 			);
 			mainGroup = 93102CC21FDB896A0073B2D1;
-			productRefGroup = 93102CCC1FDB896B0073B2D1 /* Products */;
+			productRefGroup = 93102CC21FDB896A0073B2D1;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -180,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93102CD91FDB896B0073B2D1 /* LaunchScreen.storyboard in Resources */,
+				93102CF31FDB8FFC0073B2D1 /* products.json in Resources */,
 				93102CD61FDB896B0073B2D1 /* Assets.xcassets in Resources */,
 				93102CD41FDB896B0073B2D1 /* Main.storyboard in Resources */,
 			);
@@ -189,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93102CF41FDB8FFC0073B2D1 /* products.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93102CFB1FDB93730073B2D1 /* ProductsError.swift in Sources */,
 				93102CD11FDB896B0073B2D1 /* ViewController.swift in Sources */,
 				93102CCF1FDB896B0073B2D1 /* AppDelegate.swift in Sources */,
+				93102CF71FDB92380073B2D1 /* ProductsStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +256,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93102CFC1FDB93730073B2D1 /* ProductsError.swift in Sources */,
 				93102CE41FDB896B0073B2D1 /* amaroTests.swift in Sources */,
+				93102CF81FDB92380073B2D1 /* ProductsStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
