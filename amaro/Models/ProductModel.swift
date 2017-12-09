@@ -21,7 +21,9 @@ struct ProductModel: Unmarshaling{
     var installments: String?
     var image: String?
     var sizes: [SizeModel]?
-    
+}
+
+extension ProductModel{
     init(object: MarshaledObject){
         name = try? object.value(for: "name")
         style = try? object.value(for: "style")

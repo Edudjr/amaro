@@ -13,7 +13,9 @@ struct SizeModel: Unmarshaling{
     var available: Bool?
     var size: String?
     var sku: String?
-    
+}
+
+extension SizeModel{
     init(object: MarshaledObject){
         available = try? object.value(for: "available")
         size = try? object.value(for: "size")

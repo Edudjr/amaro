@@ -19,6 +19,8 @@ class amaroTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        //var cart = UserModelSingleton.sharedInstance.shoppingCart
+        ShoppingCartSingleton.sharedInstance.removeAllFromCart()
     }
     
     func testLoadProductsFile(){
@@ -125,4 +127,66 @@ class amaroTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
+    func testEmptyShoppingCart(){
+        let count = ShoppingCartSingleton.sharedInstance.getCartProducts().count
+        XCTAssertEqual(count, 0)
+    }
+    
+    func testAddProductsToShoppingCart(){
+        var product1 = ProductModel()
+        var product2 = ProductModel()
+        
+        product1.name = "VESTIDO"
+        product2.name = "REGATA"
+        
+        ShoppingCartSingleton.sharedInstance.addProductToCart(product1)
+        ShoppingCartSingleton.sharedInstance.addProductToCart(product2)
+        var cart = ShoppingCartSingleton.sharedInstance.getCartProducts()
+        let count = cart.count
+        
+        XCTAssertEqual(count, 2)
+        XCTAssertEqual(cart[0].name, "VESTIDO")
+        XCTAssertEqual(cart[1].name, "REGATA")
+    }
+    
+    func testRemoveAllProductsFromShoppingCart(){
+        let product1 = ProductModel()
+        let product2 = ProductModel()
+        
+        ShoppingCartSingleton.sharedInstance.addProductToCart(product1)
+        ShoppingCartSingleton.sharedInstance.addProductToCart(product2)
+        
+        ShoppingCartSingleton.sharedInstance.removeAllFromCart()
+        
+        let count = ShoppingCartSingleton.sharedInstance.getCartProducts().count
+        
+        XCTAssertEqual(count, 0)
+    }
+    
+    func testRemoveProductWithInvalidIndex(){
+        let cart = ShoppingCartSingleton.sharedInstance
+        XCTAssertNoThrow(cart.removeProductFromCart(atIndex: 5), "Shouldn't throw")
+        XCTAssertNoThrow(cart.removeProductFromCart(atIndex: -1), "Shouldn't throw")
+    }
+    
+    func testRemoveProductWithIndex(){
+        var product1 = ProductModel()
+        var product2 = ProductModel()
+        let cart = ShoppingCartSingleton.sharedInstance
+        
+        product1.name = "VESTIDO"
+        product2.name = "REGATA"
+        
+        cart.addProductToCart(product1)
+        cart.addProductToCart(product2)
+        cart.removeProductFromCart(atIndex: 0)
+        
+        let products = ShoppingCartSingleton.sharedInstance.getCartProducts()
+        let count = products.count
+        
+        XCTAssertEqual(count, 1)
+        if let name = products[0].name{
+            XCTAssertEqual(name, "REGATA")
+        }
+    }
 }
