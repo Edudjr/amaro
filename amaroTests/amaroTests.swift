@@ -100,4 +100,29 @@ class amaroTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0)
     }
     
+    func testProductsStoreOnSale(){
+        let expectation = XCTestExpectation(description: "Get Products from Store that are on sale")
+        
+        ProductsStore.sharedInstance.getProductsOnSale(page: 1) { (data, error) in
+            XCTAssertNil(error, "Error should be nil")
+            XCTAssertNotNil(data, "Data should not be nil")
+            XCTAssertEqual(data?.count, 8)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testProductsStoreOnSaleInvalidIndexPage(){
+        let expectation = XCTestExpectation(description: "Get Products from Store that are on sale")
+        
+        ProductsStore.sharedInstance.getProductsOnSale(page: 2) { (data, error) in
+            XCTAssertNotNil(error, "Error should not be nil")
+            XCTAssertNil(data, "Data should be nil")
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
 }

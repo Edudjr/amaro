@@ -19,7 +19,7 @@ extension ProductsError: LocalizedError {
         case .notFound:
             return NSLocalizedString("No products found", comment: "Products not found")
         case .loadError:
-            return NSLocalizedString("Couldn't load products file", comment: "Couldn't load")
+            return NSLocalizedString("Couldn't load products", comment: "Couldn't load")
         }
     }
 }
