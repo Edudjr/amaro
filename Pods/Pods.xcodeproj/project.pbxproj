@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02B6FC77E62F9E8E89BDF0B99E6F7912 /* MarshalDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFC5557124AB8C7D79DB562372A1E2C /* MarshalDictionary.swift */; };
+		08AB9D415A7437DF5F8EE0786429887F /* UnmarshalUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AD68746730EC3A03E61E1BD7B8BCE3 /* UnmarshalUpdating.swift */; };
+		16AB2B1AE8305FB3497B3C9C40D98366 /* MarshaledObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A9AA444490DDEC689149D99601007 /* MarshaledObject.swift */; };
+		42118A1087BACA32125C4D08FD486F7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		4278405D06E9E5C97FA70A641BA3D04D /* Unmarshaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC38B9D7888919FFD7792B904C17DFF /* Unmarshaling.swift */; };
+		4D221B0FF8314D784F46F882F0DF95DE /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C065034ADFDB9C9F587D033A25B75EB1 /* JSON.swift */; };
+		54DD9FB9AC03BB91986C0F7088CBEB92 /* Pods-amaro-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F6AC2BCFE903569247AD039AEB87D4E /* Pods-amaro-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		577BE62C4CA7F258523AED51F23DE837 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5885017621D582C3B9483144E287A4D5 /* KeyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72481CBE01B5ECC9F4801DE1DCE15E5 /* KeyType.swift */; };
+		5E8A506B5DFB08C4798A28024079CFCF /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8804A17FE3848B8D9539ED7846491E28 /* Operators.swift */; };
+		6E206C110158912F552F46A7A9D1ADB8 /* Pods-amaroTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BB7AE19F60BCCDBCDE96A1B49D62886 /* Pods-amaroTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74B63F61F794A351591B84D05630E88A /* Marshaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078ECA29E0212D1B803FAED45F394DDE /* Marshaling.swift */; };
+		81665C0F6C0727D5BAD2D4C4F31C47C1 /* Migration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB56CF8967B7C2EB2CB0B4A276B4FC59 /* Migration.swift */; };
+		850AAC2FCE6EFA4F1BA52607B289017B /* Marshal-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79AF20DF69AD50DA9822EAA9BAA10BF6 /* Marshal-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DF13F22DE3F84111D7BC2F7D1960808 /* Pods-amaro-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E34EE259C673F75B4C1E9D7BE0AEEAFA /* Pods-amaro-dummy.m */; };
+		9890E8C3A3536C1EA848BEBA25050ACB /* Marshal-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C77D93410810BC9C15A709A5BA286F30 /* Marshal-dummy.m */; };
+		C6B660C3D730B1457E5537238F941369 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		CF6CC35E76E5EE8F9A6441AB07E8078C /* ValueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E3E5788F7B78F18EA0BB069B57FF44 /* ValueType.swift */; };
+		D173BD8713C0B44D684A6DA27123DDA4 /* Pods-amaroTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1EF5DA85D41ACFB4C872AC522E10623 /* Pods-amaroTests-dummy.m */; };
+		F3032F80DA1421C35337F25C88A7D3E7 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3813618A6DFF527705E0BCCF7E63AEB /* Error.swift */; };
+		F982DD7DFA050A3677D64AF6EFA6E8FB /* UnmarshalingWithContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD80F62ED05412F847B28DEC0C291F3 /* UnmarshalingWithContext.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CC4D069CBFE281F4B2E10D8E60E91F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FBE2BABDD2574C536D98AC5C29F59AAC;
+			remoteInfo = Marshal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02AD68746730EC3A03E61E1BD7B8BCE3 /* UnmarshalUpdating.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnmarshalUpdating.swift; path = Sources/UnmarshalUpdating.swift; sourceTree = "<group>"; };
+		04AC13E44894F2C8C99854F747160DE8 /* Pods-amaroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-amaroTests.release.xcconfig"; sourceTree = "<group>"; };
+		062664780ABE7DBFF30EC9AC4A3E1A3A /* Pods_amaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_amaro.framework; path = "Pods-amaro.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		078ECA29E0212D1B803FAED45F394DDE /* Marshaling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marshaling.swift; path = Sources/Marshaling.swift; sourceTree = "<group>"; };
+		13598D35FDDDBC5E7C6347870E621057 /* Marshal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Marshal.framework; path = Marshal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F6AC2BCFE903569247AD039AEB87D4E /* Pods-amaro-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-amaro-umbrella.h"; sourceTree = "<group>"; };
+		2364121BD0171D5837B2FD317609EFCD /* Pods-amaroTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-amaroTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		28145CA244A57E15D7F845F5F284B1DF /* Pods-amaroTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-amaroTests-frameworks.sh"; sourceTree = "<group>"; };
+		2CE649A0C737BE5556A0E17F7B39FC38 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		381CED43FD5FE824067B80B5D77291D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3981BB5206464EFDDD1F6CC3FD7A9882 /* Pods-amaro-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-amaro-acknowledgements.plist"; sourceTree = "<group>"; };
+		3EFC5557124AB8C7D79DB562372A1E2C /* MarshalDictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarshalDictionary.swift; path = Sources/MarshalDictionary.swift; sourceTree = "<group>"; };
+		4030755A68D8B6CA44656753B666EE39 /* Pods-amaro-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-amaro-acknowledgements.markdown"; sourceTree = "<group>"; };
+		481C6D68564FF24C175FFFE7B422ED83 /* Pods-amaro-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-amaro-resources.sh"; sourceTree = "<group>"; };
+		4D55F2CB1DD8AB768A466191DA1B8063 /* Pods-amaro.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-amaro.modulemap"; sourceTree = "<group>"; };
+		5C9A9AA444490DDEC689149D99601007 /* MarshaledObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarshaledObject.swift; path = Sources/MarshaledObject.swift; sourceTree = "<group>"; };
+		5E5FB258FFD308D4161773B1F1D74787 /* Pods-amaroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-amaroTests.debug.xcconfig"; sourceTree = "<group>"; };
+		615526EA4CB79B17C23F15566FDCE5C0 /* Pods-amaro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-amaro.release.xcconfig"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		79AF20DF69AD50DA9822EAA9BAA10BF6 /* Marshal-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Marshal-umbrella.h"; sourceTree = "<group>"; };
+		7EC38B9D7888919FFD7792B904C17DFF /* Unmarshaling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Unmarshaling.swift; path = Sources/Unmarshaling.swift; sourceTree = "<group>"; };
+		80E3E5788F7B78F18EA0BB069B57FF44 /* ValueType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueType.swift; path = Sources/ValueType.swift; sourceTree = "<group>"; };
+		87C963F02914BF719CBEFA06D70485A6 /* Marshal.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Marshal.modulemap; sourceTree = "<group>"; };
+		8804A17FE3848B8D9539ED7846491E28 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/Operators.swift; sourceTree = "<group>"; };
+		891BB3A3DE3E0191828750E7E3BCD53A /* Pods-amaro-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-amaro-frameworks.sh"; sourceTree = "<group>"; };
+		8BD80F62ED05412F847B28DEC0C291F3 /* UnmarshalingWithContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnmarshalingWithContext.swift; path = Sources/UnmarshalingWithContext.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9BB7AE19F60BCCDBCDE96A1B49D62886 /* Pods-amaroTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-amaroTests-umbrella.h"; sourceTree = "<group>"; };
+		9BF3EA05BF7D9BD5AE601A318D192F63 /* Marshal-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Marshal-prefix.pch"; sourceTree = "<group>"; };
+		9D71B49AF975DE33C3630821489C7C0D /* Pods-amaroTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-amaroTests.modulemap"; sourceTree = "<group>"; };
+		A25638E7D427DE879C51A05E6BED67B7 /* Pods-amaroTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-amaroTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A3813618A6DFF527705E0BCCF7E63AEB /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
+		B98CC53E961B07D0A938E239C73707E3 /* Pods_amaroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_amaroTests.framework; path = "Pods-amaroTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C065034ADFDB9C9F587D033A25B75EB1 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSON.swift; path = Sources/JSON.swift; sourceTree = "<group>"; };
+		C72481CBE01B5ECC9F4801DE1DCE15E5 /* KeyType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyType.swift; path = Sources/KeyType.swift; sourceTree = "<group>"; };
+		C77D93410810BC9C15A709A5BA286F30 /* Marshal-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Marshal-dummy.m"; sourceTree = "<group>"; };
+		CB56CF8967B7C2EB2CB0B4A276B4FC59 /* Migration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Migration.swift; path = Sources/Migration.swift; sourceTree = "<group>"; };
+		D1EF5DA85D41ACFB4C872AC522E10623 /* Pods-amaroTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-amaroTests-dummy.m"; sourceTree = "<group>"; };
+		DC7A911961A4D1B8B8A799FD857E615B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0900BAF069D2C6F26437B073E3AF95E /* Pods-amaro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-amaro.debug.xcconfig"; sourceTree = "<group>"; };
+		E34EE259C673F75B4C1E9D7BE0AEEAFA /* Pods-amaro-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-amaro-dummy.m"; sourceTree = "<group>"; };
+		F14E1FE9DA7F81857FEFA12F691CA275 /* Marshal.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Marshal.xcconfig; sourceTree = "<group>"; };
+		FE9059FC6E9A3FE9A169CF94E235C2CB /* Pods-amaroTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-amaroTests-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1601477A78CA04C4B161C02AF2A7D67F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				577BE62C4CA7F258523AED51F23DE837 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5867ADEB412B74B8DE8F15FD1AC3B4CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B660C3D730B1457E5537238F941369 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C03C3F27655600D2669ED0AE6CD2B85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42118A1087BACA32125C4D08FD486F7C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24984D4008415DFFDB4071DC6A09C017 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E465FE616DCC98E1298320F32C85282 /* Pods-amaro */,
+				C35BD57E460379C9FBBF43A21171D540 /* Pods-amaroTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2907EBFC9AAD3D728C863F88E150EE81 /* Marshal */ = {
+			isa = PBXGroup;
+			children = (
+				A3813618A6DFF527705E0BCCF7E63AEB /* Error.swift */,
+				C065034ADFDB9C9F587D033A25B75EB1 /* JSON.swift */,
+				C72481CBE01B5ECC9F4801DE1DCE15E5 /* KeyType.swift */,
+				3EFC5557124AB8C7D79DB562372A1E2C /* MarshalDictionary.swift */,
+				5C9A9AA444490DDEC689149D99601007 /* MarshaledObject.swift */,
+				078ECA29E0212D1B803FAED45F394DDE /* Marshaling.swift */,
+				CB56CF8967B7C2EB2CB0B4A276B4FC59 /* Migration.swift */,
+				8804A17FE3848B8D9539ED7846491E28 /* Operators.swift */,
+				7EC38B9D7888919FFD7792B904C17DFF /* Unmarshaling.swift */,
+				8BD80F62ED05412F847B28DEC0C291F3 /* UnmarshalingWithContext.swift */,
+				02AD68746730EC3A03E61E1BD7B8BCE3 /* UnmarshalUpdating.swift */,
+				80E3E5788F7B78F18EA0BB069B57FF44 /* ValueType.swift */,
+				5F6060386D64BC2C506B84EC81D0E014 /* Support Files */,
+			);
+			name = Marshal;
+			path = Marshal;
+			sourceTree = "<group>";
+		};
+		4E465FE616DCC98E1298320F32C85282 /* Pods-amaro */ = {
+			isa = PBXGroup;
+			children = (
+				DC7A911961A4D1B8B8A799FD857E615B /* Info.plist */,
+				4D55F2CB1DD8AB768A466191DA1B8063 /* Pods-amaro.modulemap */,
+				4030755A68D8B6CA44656753B666EE39 /* Pods-amaro-acknowledgements.markdown */,
+				3981BB5206464EFDDD1F6CC3FD7A9882 /* Pods-amaro-acknowledgements.plist */,
+				E34EE259C673F75B4C1E9D7BE0AEEAFA /* Pods-amaro-dummy.m */,
+				891BB3A3DE3E0191828750E7E3BCD53A /* Pods-amaro-frameworks.sh */,
+				481C6D68564FF24C175FFFE7B422ED83 /* Pods-amaro-resources.sh */,
+				1F6AC2BCFE903569247AD039AEB87D4E /* Pods-amaro-umbrella.h */,
+				E0900BAF069D2C6F26437B073E3AF95E /* Pods-amaro.debug.xcconfig */,
+				615526EA4CB79B17C23F15566FDCE5C0 /* Pods-amaro.release.xcconfig */,
+			);
+			name = "Pods-amaro";
+			path = "Target Support Files/Pods-amaro";
+			sourceTree = "<group>";
+		};
+		5F6060386D64BC2C506B84EC81D0E014 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CE649A0C737BE5556A0E17F7B39FC38 /* Info.plist */,
+				87C963F02914BF719CBEFA06D70485A6 /* Marshal.modulemap */,
+				F14E1FE9DA7F81857FEFA12F691CA275 /* Marshal.xcconfig */,
+				C77D93410810BC9C15A709A5BA286F30 /* Marshal-dummy.m */,
+				9BF3EA05BF7D9BD5AE601A318D192F63 /* Marshal-prefix.pch */,
+				79AF20DF69AD50DA9822EAA9BAA10BF6 /* Marshal-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Marshal";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CE5C6B82D220C0E91F728886B9ABC70D /* Pods */,
+				B2B4972B16DB8028C67C42C2AF961C88 /* Products */,
+				24984D4008415DFFDB4071DC6A09C017 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B2B4972B16DB8028C67C42C2AF961C88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13598D35FDDDBC5E7C6347870E621057 /* Marshal.framework */,
+				062664780ABE7DBFF30EC9AC4A3E1A3A /* Pods_amaro.framework */,
+				B98CC53E961B07D0A938E239C73707E3 /* Pods_amaroTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C35BD57E460379C9FBBF43A21171D540 /* Pods-amaroTests */ = {
+			isa = PBXGroup;
+			children = (
+				381CED43FD5FE824067B80B5D77291D7 /* Info.plist */,
+				9D71B49AF975DE33C3630821489C7C0D /* Pods-amaroTests.modulemap */,
+				A25638E7D427DE879C51A05E6BED67B7 /* Pods-amaroTests-acknowledgements.markdown */,
+				2364121BD0171D5837B2FD317609EFCD /* Pods-amaroTests-acknowledgements.plist */,
+				D1EF5DA85D41ACFB4C872AC522E10623 /* Pods-amaroTests-dummy.m */,
+				28145CA244A57E15D7F845F5F284B1DF /* Pods-amaroTests-frameworks.sh */,
+				FE9059FC6E9A3FE9A169CF94E235C2CB /* Pods-amaroTests-resources.sh */,
+				9BB7AE19F60BCCDBCDE96A1B49D62886 /* Pods-amaroTests-umbrella.h */,
+				5E5FB258FFD308D4161773B1F1D74787 /* Pods-amaroTests.debug.xcconfig */,
+				04AC13E44894F2C8C99854F747160DE8 /* Pods-amaroTests.release.xcconfig */,
+			);
+			name = "Pods-amaroTests";
+			path = "Target Support Files/Pods-amaroTests";
+			sourceTree = "<group>";
+		};
+		CE5C6B82D220C0E91F728886B9ABC70D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2907EBFC9AAD3D728C863F88E150EE81 /* Marshal */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3398B1F2338BFAD736D28A6F3D105D8C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E206C110158912F552F46A7A9D1ADB8 /* Pods-amaroTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC4F4E56F8ECAC1178C8045FAC49791D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				850AAC2FCE6EFA4F1BA52607B289017B /* Marshal-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDE1CAC95C67556C06ABAF5830C60E42 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				54DD9FB9AC03BB91986C0F7088CBEB92 /* Pods-amaro-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5C950C1327A4F956B6352FC56A806E50 /* Pods-amaro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC644085072484F04AAB65C57521E9D8 /* Build configuration list for PBXNativeTarget "Pods-amaro" */;
+			buildPhases = (
+				27A45CE58DBC034944397B8249341D47 /* Sources */,
+				1601477A78CA04C4B161C02AF2A7D67F /* Frameworks */,
+				DDE1CAC95C67556C06ABAF5830C60E42 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5BCED897CC60BA738EB23CC46330D46 /* PBXTargetDependency */,
+			);
+			name = "Pods-amaro";
+			productName = "Pods-amaro";
+			productReference = 062664780ABE7DBFF30EC9AC4A3E1A3A /* Pods_amaro.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A2BD5C4573D5D8CB50C5DC9FB043AE6D /* Pods-amaroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F19095B76ECE58B5BBE3615935DBC542 /* Build configuration list for PBXNativeTarget "Pods-amaroTests" */;
+			buildPhases = (
+				BCFC7B881BCC7D83F95C3FDD3AA2DF18 /* Sources */,
+				7C03C3F27655600D2669ED0AE6CD2B85 /* Frameworks */,
+				3398B1F2338BFAD736D28A6F3D105D8C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-amaroTests";
+			productName = "Pods-amaroTests";
+			productReference = B98CC53E961B07D0A938E239C73707E3 /* Pods_amaroTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FBE2BABDD2574C536D98AC5C29F59AAC /* Marshal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A9C5BA1C20EDC507AA4BA53BBDB621 /* Build configuration list for PBXNativeTarget "Marshal" */;
+			buildPhases = (
+				4A4ECD822FAC12A30BDE2424F2E8226C /* Sources */,
+				5867ADEB412B74B8DE8F15FD1AC3B4CB /* Frameworks */,
+				DC4F4E56F8ECAC1178C8045FAC49791D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Marshal;
+			productName = Marshal;
+			productReference = 13598D35FDDDBC5E7C6347870E621057 /* Marshal.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = B2B4972B16DB8028C67C42C2AF961C88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBE2BABDD2574C536D98AC5C29F59AAC /* Marshal */,
+				5C950C1327A4F956B6352FC56A806E50 /* Pods-amaro */,
+				A2BD5C4573D5D8CB50C5DC9FB043AE6D /* Pods-amaroTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27A45CE58DBC034944397B8249341D47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DF13F22DE3F84111D7BC2F7D1960808 /* Pods-amaro-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A4ECD822FAC12A30BDE2424F2E8226C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3032F80DA1421C35337F25C88A7D3E7 /* Error.swift in Sources */,
+				4D221B0FF8314D784F46F882F0DF95DE /* JSON.swift in Sources */,
+				5885017621D582C3B9483144E287A4D5 /* KeyType.swift in Sources */,
+				9890E8C3A3536C1EA848BEBA25050ACB /* Marshal-dummy.m in Sources */,
+				02B6FC77E62F9E8E89BDF0B99E6F7912 /* MarshalDictionary.swift in Sources */,
+				16AB2B1AE8305FB3497B3C9C40D98366 /* MarshaledObject.swift in Sources */,
+				74B63F61F794A351591B84D05630E88A /* Marshaling.swift in Sources */,
+				81665C0F6C0727D5BAD2D4C4F31C47C1 /* Migration.swift in Sources */,
+				5E8A506B5DFB08C4798A28024079CFCF /* Operators.swift in Sources */,
+				4278405D06E9E5C97FA70A641BA3D04D /* Unmarshaling.swift in Sources */,
+				F982DD7DFA050A3677D64AF6EFA6E8FB /* UnmarshalingWithContext.swift in Sources */,
+				08AB9D415A7437DF5F8EE0786429887F /* UnmarshalUpdating.swift in Sources */,
+				CF6CC35E76E5EE8F9A6441AB07E8078C /* ValueType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCFC7B881BCC7D83F95C3FDD3AA2DF18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D173BD8713C0B44D684A6DA27123DDA4 /* Pods-amaroTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5BCED897CC60BA738EB23CC46330D46 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Marshal;
+			target = FBE2BABDD2574C536D98AC5C29F59AAC /* Marshal */;
+			targetProxy = 1CC4D069CBFE281F4B2E10D8E60E91F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		657A34A9CBF2A244CA0B737E9569702C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F14E1FE9DA7F81857FEFA12F691CA275 /* Marshal.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Marshal/Marshal-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Marshal/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Marshal/Marshal.modulemap";
+				PRODUCT_NAME = Marshal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6F9224530522DD3C735EC96CF142642E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		970C60C1A09C795D9A078AB4FBDE4BE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0900BAF069D2C6F26437B073E3AF95E /* Pods-amaro.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-amaro/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-amaro/Pods-amaro.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_amaro;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9B8F469F3B63A88124C99EBEB11F4A9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 615526EA4CB79B17C23F15566FDCE5C0 /* Pods-amaro.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-amaro/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-amaro/Pods-amaro.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_amaro;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A55B97BA2F6D93E8588EEBEBA8F2E663 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F14E1FE9DA7F81857FEFA12F691CA275 /* Marshal.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Marshal/Marshal-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Marshal/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Marshal/Marshal.modulemap";
+				PRODUCT_NAME = Marshal;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A7F2D00CE1476ADCEE8A3BBA20F80D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E5FB258FFD308D4161773B1F1D74787 /* Pods-amaroTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-amaroTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-amaroTests/Pods-amaroTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_amaroTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B57951D085A1B98A97F8A1062A5E5C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E9CC723D86FE081D79BFC87499D0DE84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04AC13E44894F2C8C99854F747160DE8 /* Pods-amaroTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-amaroTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-amaroTests/Pods-amaroTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_amaroTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27A9C5BA1C20EDC507AA4BA53BBDB621 /* Build configuration list for PBXNativeTarget "Marshal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A55B97BA2F6D93E8588EEBEBA8F2E663 /* Debug */,
+				657A34A9CBF2A244CA0B737E9569702C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57951D085A1B98A97F8A1062A5E5C5B /* Debug */,
+				6F9224530522DD3C735EC96CF142642E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F19095B76ECE58B5BBE3615935DBC542 /* Build configuration list for PBXNativeTarget "Pods-amaroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F2D00CE1476ADCEE8A3BBA20F80D74 /* Debug */,
+				E9CC723D86FE081D79BFC87499D0DE84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC644085072484F04AAB65C57521E9D8 /* Build configuration list for PBXNativeTarget "Pods-amaro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				970C60C1A09C795D9A078AB4FBDE4BE7 /* Debug */,
+				9B8F469F3B63A88124C99EBEB11F4A9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

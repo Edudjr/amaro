@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39E2A482EED245CE5FB42FD5 /* Pods_amaro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1C72C356B663F10025D001 /* Pods_amaro.framework */; };
+		45B2E9E7685AC87836FDF1C8 /* Pods_amaroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11017D730BF65BFED2B7E73 /* Pods_amaroTests.framework */; };
 		93102CCF1FDB896B0073B2D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102CCE1FDB896B0073B2D1 /* AppDelegate.swift */; };
 		93102CD11FDB896B0073B2D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102CD01FDB896B0073B2D1 /* ViewController.swift */; };
 		93102CD41FDB896B0073B2D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93102CD21FDB896B0073B2D1 /* Main.storyboard */; };
@@ -32,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20F6466031B99EB9C777142D /* Pods-amaro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amaro.release.xcconfig"; path = "Pods/Target Support Files/Pods-amaro/Pods-amaro.release.xcconfig"; sourceTree = "<group>"; };
+		250414C133C0B1DCFD393AE4 /* Pods-amaroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amaroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amaroTests/Pods-amaroTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4BA954F62C595F2490D5C870 /* Pods-amaroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amaroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-amaroTests/Pods-amaroTests.release.xcconfig"; sourceTree = "<group>"; };
+		529BE528603ED279382436B1 /* Pods-amaro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amaro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-amaro/Pods-amaro.debug.xcconfig"; sourceTree = "<group>"; };
 		93102CCE1FDB896B0073B2D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93102CD01FDB896B0073B2D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		93102CD31FDB896B0073B2D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +51,8 @@
 		93102CF21FDB8FFC0073B2D1 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		93102CF61FDB92380073B2D1 /* ProductsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsStore.swift; sourceTree = "<group>"; };
 		93102CFA1FDB93730073B2D1 /* ProductsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsError.swift; sourceTree = "<group>"; };
+		9B1C72C356B663F10025D001 /* Pods_amaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amaro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11017D730BF65BFED2B7E73 /* Pods_amaroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amaroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39E2A482EED245CE5FB42FD5 /* Pods_amaro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,12 +68,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45B2E9E7685AC87836FDF1C8 /* Pods_amaroTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		593EFFE953B6025E8B505F3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				529BE528603ED279382436B1 /* Pods-amaro.debug.xcconfig */,
+				20F6466031B99EB9C777142D /* Pods-amaro.release.xcconfig */,
+				250414C133C0B1DCFD393AE4 /* Pods-amaroTests.debug.xcconfig */,
+				4BA954F62C595F2490D5C870 /* Pods-amaroTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		93102CC21FDB896A0073B2D1 = {
 			isa = PBXGroup;
 			children = (
@@ -72,12 +93,15 @@
 				93102CE21FDB896B0073B2D1 /* amaroTests */,
 				93102CF01FDB8F560073B2D1 /* amaro.app */,
 				93102CF11FDB8F560073B2D1 /* amaroTests.xctest */,
+				593EFFE953B6025E8B505F3C /* Pods */,
+				B52A8A8D27F17070F3864A56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		93102CCD1FDB896B0073B2D1 /* amaro */ = {
 			isa = PBXGroup;
 			children = (
+				93102CFF1FDB968C0073B2D1 /* Models */,
 				93102CFE1FDB95440073B2D1 /* Views */,
 				93102CFD1FDB952E0073B2D1 /* Controllers */,
 				93102CF91FDB93550073B2D1 /* Helpers */,
@@ -140,6 +164,22 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		93102CFF1FDB968C0073B2D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B52A8A8D27F17070F3864A56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B1C72C356B663F10025D001 /* Pods_amaro.framework */,
+				A11017D730BF65BFED2B7E73 /* Pods_amaroTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93102CE81FDB896B0073B2D1 /* Build configuration list for PBXNativeTarget "amaro" */;
 			buildPhases = (
+				E1424C59F599545C6784A2F5 /* [CP] Check Pods Manifest.lock */,
 				93102CC71FDB896A0073B2D1 /* Sources */,
 				93102CC81FDB896A0073B2D1 /* Frameworks */,
 				93102CC91FDB896A0073B2D1 /* Resources */,
+				A970A64076B3D41AE8A9E047 /* [CP] Embed Pods Frameworks */,
+				ED596D1F01387B63B44CFF67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93102CEB1FDB896B0073B2D1 /* Build configuration list for PBXNativeTarget "amaroTests" */;
 			buildPhases = (
+				D8CB0ED5769AECF757A54A5F /* [CP] Check Pods Manifest.lock */,
 				93102CDB1FDB896B0073B2D1 /* Sources */,
 				93102CDC1FDB896B0073B2D1 /* Frameworks */,
 				93102CDD1FDB896B0073B2D1 /* Resources */,
+				C1D77F4B73D9E93C66F18419 /* [CP] Embed Pods Frameworks */,
+				2622624150FCB09E45A84E82 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +285,108 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2622624150FCB09E45A84E82 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amaroTests/Pods-amaroTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A970A64076B3D41AE8A9E047 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-amaro/Pods-amaro-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Marshal/Marshal.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marshal.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amaro/Pods-amaro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1D77F4B73D9E93C66F18419 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amaroTests/Pods-amaroTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8CB0ED5769AECF757A54A5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-amaroTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1424C59F599545C6784A2F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-amaro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED596D1F01387B63B44CFF67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-amaro/Pods-amaro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93102CC71FDB896A0073B2D1 /* Sources */ = {
@@ -401,6 +549,7 @@
 		};
 		93102CE91FDB896B0073B2D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 529BE528603ED279382436B1 /* Pods-amaro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -416,6 +565,7 @@
 		};
 		93102CEA1FDB896B0073B2D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20F6466031B99EB9C777142D /* Pods-amaro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -431,6 +581,7 @@
 		};
 		93102CEC1FDB896B0073B2D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 250414C133C0B1DCFD393AE4 /* Pods-amaroTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -447,6 +598,7 @@
 		};
 		93102CED1FDB896B0073B2D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BA954F62C595F2490D5C870 /* Pods-amaroTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
