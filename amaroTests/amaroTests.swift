@@ -128,65 +128,116 @@ class amaroTests: XCTestCase {
     }
     
     func testEmptyShoppingCart(){
-        let count = ShoppingCartSingleton.sharedInstance.getCartProducts().count
+        let count = ShoppingCartSingleton.sharedInstance.getCartItems().count
         XCTAssertEqual(count, 0)
     }
     
-    func testAddProductsToShoppingCart(){
+    func testAddDifferentProductsToShoppingCart(){
         var product1 = ProductModel()
         var product2 = ProductModel()
-        
+
         product1.name = "VESTIDO"
         product2.name = "REGATA"
-        
+
         ShoppingCartSingleton.sharedInstance.addProductToCart(product1)
         ShoppingCartSingleton.sharedInstance.addProductToCart(product2)
-        var cart = ShoppingCartSingleton.sharedInstance.getCartProducts()
-        let count = cart.count
         
+        var items = ShoppingCartSingleton.sharedInstance.getCartItems()
+        let count = items.count
+
         XCTAssertEqual(count, 2)
-        XCTAssertEqual(cart[0].name, "VESTIDO")
-        XCTAssertEqual(cart[1].name, "REGATA")
+        XCTAssertEqual(items[0].product.name, "VESTIDO")
+        XCTAssertEqual(items[0].quantity, 1)
+        XCTAssertEqual(items[1].product.name, "REGATA")
+        XCTAssertEqual(items[1].quantity, 1)
+    }
+    
+    func testAddSameProductToShoppingCart(){
+        var product1 = ProductModel()
+        
+        product1.name = "VESTIDO"
+        
+        ShoppingCartSingleton.sharedInstance.addProductToCart(product1)
+        ShoppingCartSingleton.sharedInstance.addProductToCart(product1)
+        
+        var items = ShoppingCartSingleton.sharedInstance.getCartItems()
+        let count = items.count
+        
+        XCTAssertEqual(count, 1)
+        XCTAssertEqual(items[0].product.name, "VESTIDO")
+        XCTAssertEqual(items[0].quantity, 2)
     }
     
     func testRemoveAllProductsFromShoppingCart(){
         let product1 = ProductModel()
         let product2 = ProductModel()
-        
+
         ShoppingCartSingleton.sharedInstance.addProductToCart(product1)
         ShoppingCartSingleton.sharedInstance.addProductToCart(product2)
-        
+
         ShoppingCartSingleton.sharedInstance.removeAllFromCart()
-        
-        let count = ShoppingCartSingleton.sharedInstance.getCartProducts().count
-        
+
+        let count = ShoppingCartSingleton.sharedInstance.getCartItems().count
+
         XCTAssertEqual(count, 0)
     }
     
-    func testRemoveProductWithInvalidIndex(){
+    func testRemoveProductWithQuantityOne(){
         let cart = ShoppingCartSingleton.sharedInstance
-        XCTAssertNoThrow(cart.removeProductFromCart(atIndex: 5), "Shouldn't throw")
-        XCTAssertNoThrow(cart.removeProductFromCart(atIndex: -1), "Shouldn't throw")
+        var product = ProductModel()
+        product.name = "VESTIDO"
+        
+        cart.addProductToCart(product)
+        cart.removeProductFromCart(product)
+        
+        XCTAssertEqual(cart.getCartItems().count, 0)
     }
     
-    func testRemoveProductWithIndex(){
-        var product1 = ProductModel()
-        var product2 = ProductModel()
+    func testRemoveProductWithQuantityTwo(){
         let cart = ShoppingCartSingleton.sharedInstance
+        var product = ProductModel()
+        product.name = "VESTIDO"
         
-        product1.name = "VESTIDO"
-        product2.name = "REGATA"
+        cart.addProductToCart(product)
+        cart.addProductToCart(product)
+        cart.removeProductFromCart(product)
         
-        cart.addProductToCart(product1)
-        cart.addProductToCart(product2)
-        cart.removeProductFromCart(atIndex: 0)
-        
-        let products = ShoppingCartSingleton.sharedInstance.getCartProducts()
-        let count = products.count
-        
+        let count = cart.getCartItems().count
         XCTAssertEqual(count, 1)
-        if let name = products[0].name{
-            XCTAssertEqual(name, "REGATA")
+        if (count >= 0){
+            let item = cart.getCartItems()[0]
+            XCTAssertEqual(item.quantity, 1)
         }
+    }
+    
+    func testCurrencyToDecimal() {
+        let price = "R$ 139,90"
+        let value = price.currencyToDecimal
+        XCTAssertEqual(value, 139.90)
+    }
+    
+    func testDecimalToCurrency() {
+        let price = Decimal(139.90)
+        let value = price.decimalToCurrency
+        XCTAssertEqual(value, "R$ 139,90")
+    }
+    
+    func testCartTotalAmount(){
+        let cart = ShoppingCartSingleton.sharedInstance
+        var product = ProductModel()
+        var product2 = ProductModel()
+        
+        product.name = "VESTIDO"
+        product.actualPrice = "R$ 20,10"
+        
+        product2.name = "BLUSA"
+        product2.actualPrice = "R$ 10,00"
+        
+        cart.addProductToCart(product)
+        cart.addProductToCart(product)
+        cart.addProductToCart(product2)
+        
+        let total = try? cart.getTotalAmount()
+        XCTAssertEqual(total, Decimal(50.20))
     }
 }
