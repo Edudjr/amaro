@@ -21,16 +21,18 @@ class amaroTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testLoadProductsFile(){
+        // Create an expectation for a background download task.
+        let expectation = XCTestExpectation(description: "Load Products File")
+        
+        LoadFiles.sharedInstance.productsData { (data, error) in
+            XCTAssertNotNil(data, "Couldn't load file. No data.")
+            XCTAssertNil(error, "Couldn't load file. Found Error.")
+            expectation.fulfill()
         }
+        
+        // Wait until the expectation is fulfilled, with a timeout of 10 seconds.
+        wait(for: [expectation], timeout: 10.0)
     }
     
 }
