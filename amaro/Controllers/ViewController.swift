@@ -50,6 +50,21 @@ class ViewController: UIViewController {
     
     internal func setupCellItem(item: ItemViewController, product: ProductModel){
         item.descriptionLabel.text = product.name
+        item.installmentsLabel.text = product.installments
+        item.priceLabel.text = product.regularPrice
+        
+        if let onSale = product.onSale, onSale == true, let discount = product.discountPercentage {
+            item.saleView.isHidden = false
+            item.saleLabel.text = "\(discount)OFF"
+            item.actualPriceLabel.isHidden = false
+            item.actualPriceLabel.text = product.actualPrice
+            let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: product.regularPrice!)
+            attributeString.addAttribute(.strikethroughStyle, value: 1, range: NSMakeRange(0, attributeString.length))
+            item.priceLabel.attributedText = attributeString
+        }else{
+            item.saleView.isHidden = true
+            item.actualPriceLabel.isHidden = true
+        }
         
         //Setup image
         if let imageURL = product.image, imageURL.isEmpty == false {

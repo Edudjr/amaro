@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -42,7 +43,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="AMARO" id="vaU-CM-5t7"/>
+                    <navigationItem key="navigationItem" title="AMARO" id="vaU-CM-5t7">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Filtro" image="cart" id="hdX-nO-mDP">
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="sale" id="WfV-oI-lKW">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="xjg-Pe-Y4a" id="drd-eA-cnp"/>
                     </connections>
@@ -68,4 +78,8 @@
             <point key="canvasLocation" x="-1332" y="99"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cart" width="25" height="25"/>
+        <image name="sale" width="25" height="25"/>
+    </resources>
 </document>
