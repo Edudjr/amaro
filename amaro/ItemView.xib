@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ItemViewController" customModule="amaro" customModuleProvider="target">
             <connections>
                 <outlet property="actualPriceLabel" destination="BX6-at-fDy" id="fCC-cg-bpH"/>
+                <outlet property="cartButton" destination="sRg-FN-BAg" id="ZH5-7J-oZI"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="prp-Et-DtG"/>
                 <outlet property="descriptionLabel" destination="ueh-q1-8Un" id="9Wt-An-yX8"/>
                 <outlet property="imageView" destination="V9F-RR-oSW" id="ChA-C4-wu5"/>
@@ -139,28 +140,46 @@
                                 <constraint firstAttribute="trailing" secondItem="06y-v7-H5X" secondAttribute="trailing" constant="5" id="xbZ-3K-vUi"/>
                             </constraints>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cartAdd" translatesAutoresizingMaskIntoConstraints="NO" id="MDl-In-VFq">
-                            <rect key="frame" x="162.5" y="295" width="20" height="20"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UcE-VL-axA">
+                            <rect key="frame" x="167" y="295" width="20" height="20"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cartAdd" translatesAutoresizingMaskIntoConstraints="NO" id="MDl-In-VFq">
+                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRg-FN-BAg">
+                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                    <state key="normal" title="Button"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="20" id="2tE-kh-Ks9"/>
-                                <constraint firstAttribute="height" constant="20" id="hD3-0r-LIg"/>
+                                <constraint firstAttribute="bottom" secondItem="sRg-FN-BAg" secondAttribute="bottom" id="930-D9-cqW"/>
+                                <constraint firstItem="MDl-In-VFq" firstAttribute="top" secondItem="UcE-VL-axA" secondAttribute="top" id="AIw-fN-o5w"/>
+                                <constraint firstAttribute="width" constant="20" id="Ha0-yX-r4r"/>
+                                <constraint firstItem="sRg-FN-BAg" firstAttribute="top" secondItem="UcE-VL-axA" secondAttribute="top" id="VFU-Ut-PJZ"/>
+                                <constraint firstAttribute="height" constant="20" id="Wht-jL-zeV"/>
+                                <constraint firstItem="MDl-In-VFq" firstAttribute="leading" secondItem="UcE-VL-axA" secondAttribute="leading" id="aU6-64-INc"/>
+                                <constraint firstAttribute="trailing" secondItem="MDl-In-VFq" secondAttribute="trailing" id="bvF-bF-i5y"/>
+                                <constraint firstAttribute="trailing" secondItem="sRg-FN-BAg" secondAttribute="trailing" id="jBB-uD-Yur"/>
+                                <constraint firstAttribute="bottom" secondItem="MDl-In-VFq" secondAttribute="bottom" id="sV2-Ky-u7Z"/>
+                                <constraint firstItem="sRg-FN-BAg" firstAttribute="leading" secondItem="UcE-VL-axA" secondAttribute="leading" id="tWS-hO-gih"/>
                             </constraints>
-                        </imageView>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="j83-RZ-O0m" firstAttribute="top" secondItem="NK9-DW-0lR" secondAttribute="top" id="2ce-RI-3vC"/>
                         <constraint firstItem="vhG-9f-arI" firstAttribute="leading" secondItem="NK9-DW-0lR" secondAttribute="leading" constant="1" id="4QT-gq-xiI"/>
                         <constraint firstItem="vhG-9f-arI" firstAttribute="top" secondItem="NK9-DW-0lR" secondAttribute="top" constant="1" id="9Zh-Vx-vut"/>
-                        <constraint firstAttribute="trailing" secondItem="MDl-In-VFq" secondAttribute="trailing" constant="10" id="BFL-Sn-fhe"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="192" id="FYl-5f-MKS"/>
-                        <constraint firstAttribute="bottom" secondItem="MDl-In-VFq" secondAttribute="bottom" constant="5" id="Gty-11-OMo"/>
+                        <constraint firstAttribute="bottom" secondItem="UcE-VL-axA" secondAttribute="bottom" constant="5" id="KtI-BK-Xbs"/>
                         <constraint firstAttribute="trailing" secondItem="j83-RZ-O0m" secondAttribute="trailing" id="Wro-kq-g6r"/>
                         <constraint firstItem="BX6-at-fDy" firstAttribute="top" secondItem="ueh-q1-8Un" secondAttribute="bottom" constant="2" id="ast-fV-kdU"/>
                         <constraint firstItem="4Is-9G-yhK" firstAttribute="leading" secondItem="NK9-DW-0lR" secondAttribute="leading" constant="5" id="b6z-2I-cVW"/>
                         <constraint firstItem="BX6-at-fDy" firstAttribute="leading" secondItem="4Is-9G-yhK" secondAttribute="trailing" constant="3" id="gcb-mg-5Oq"/>
                         <constraint firstAttribute="trailing" secondItem="vhG-9f-arI" secondAttribute="trailing" constant="1" id="h2v-zR-0fp"/>
                         <constraint firstItem="ueh-q1-8Un" firstAttribute="top" secondItem="vhG-9f-arI" secondAttribute="bottom" constant="1" id="iWS-Ox-WQ8"/>
+                        <constraint firstAttribute="trailing" secondItem="UcE-VL-axA" secondAttribute="trailing" constant="5" id="jXR-B2-LAE"/>
                         <constraint firstItem="ueh-q1-8Un" firstAttribute="leading" secondItem="NK9-DW-0lR" secondAttribute="leading" constant="5" id="pHW-hR-pLq"/>
                         <constraint firstAttribute="bottom" secondItem="7ho-Nq-PKm" secondAttribute="bottom" constant="5" id="qBY-E8-voP"/>
                         <constraint firstItem="4Is-9G-yhK" firstAttribute="top" secondItem="ueh-q1-8Un" secondAttribute="bottom" constant="2" id="uCU-ae-aNd"/>

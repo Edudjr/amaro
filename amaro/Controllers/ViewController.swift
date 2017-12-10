@@ -11,6 +11,8 @@ import Kingfisher
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var filtroItem: UIBarButtonItem!
+    @IBOutlet weak var salesButton: UIButton!
     
     var products = [ProductModel]()
     var currentPage = 1
@@ -21,6 +23,8 @@ class ViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.bounces = false
+        tableView.allowsSelection = false
+        salesButton.addTarget(self, action: #selector(onFiltroItemClicked(sender:)), for: .touchUpInside)
         
         //Register cell
         let nib = UINib(nibName: "CustomTableViewCell", bundle: nil)
@@ -32,6 +36,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func onFiltroItemClicked(sender: UIGestureRecognizer){
+        print("OKOK")
     }
     
     internal func fetchProducts(forPage page: Int){
@@ -49,6 +57,8 @@ class ViewController: UIViewController {
     }
     
     internal func setupCellItem(item: ItemViewController, product: ProductModel){
+        item.delegate = self
+        item.product = product
         item.descriptionLabel.text = product.name
         item.installmentsLabel.text = product.installments
         item.priceLabel.text = product.regularPrice
@@ -90,7 +100,6 @@ extension ViewController: UITableViewDataSource{
         if secondIndex < products.count {
             self.setupCellItem(item: cell.item2, product: products[secondIndex])
         }
-        
         return cell
     }
     
@@ -116,3 +125,15 @@ extension ViewController: UITableViewDelegate{
     
 }
 
+extension ViewController: CustomItemViewControllerDelegate {
+    func didClickOnItem(item: ItemViewController) {
+        //
+    }
+    
+    func didClickOnCart(item: ItemViewController) {
+        if let product = item.product{
+            ShoppingCartSingleton.sharedInstance.addProductToCart(product)
+        }
+        print(ShoppingCartSingleton.sharedInstance.getCartItems())
+    }
+}

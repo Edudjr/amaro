@@ -48,12 +48,20 @@
                             <barButtonItem title="Filtro" image="cart" id="hdX-nO-mDP">
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             </barButtonItem>
-                            <barButtonItem title="Item" image="sale" id="WfV-oI-lKW">
+                            <barButtonItem style="plain" id="6fJ-vP-Xc0">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MZi-tR-ne0">
+                                    <rect key="frame" x="285" y="7" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal" image="sale"/>
+                                </button>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="filtroItem" destination="hdX-nO-mDP" id="GbZ-qv-7Zo"/>
+                        <outlet property="salesButton" destination="MZi-tR-ne0" id="73a-t9-Cwz"/>
                         <outlet property="tableView" destination="xjg-Pe-Y4a" id="drd-eA-cnp"/>
                     </connections>
                 </viewController>
