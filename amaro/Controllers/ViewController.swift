@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     var products = [ProductModel]()
     var currentPage = 1
+    var isOnSale = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,15 @@ class ViewController: UIViewController {
     }
     
     @objc func onFiltroItemClicked(sender: UIGestureRecognizer){
-        print("OKOK")
+        isOnSale = !isOnSale
+        salesButton.isSelected = isOnSale
+        currentPage = 1
+        products.removeAll()
+        if (isOnSale){
+            fetchOnSaleProducts(forPage: currentPage)
+        }else{
+            fetchProducts(forPage: currentPage)
+        }
     }
     
     internal func fetchProducts(forPage page: Int){
@@ -49,6 +58,19 @@ class ViewController: UIViewController {
                 return
             }
             
+            self.products.append(contentsOf: data)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    internal func fetchOnSaleProducts(forPage page: Int){
+        ProductsStore.sharedInstance.getProductsOnSale(page: page) { (data, error) in
+            guard error == nil, let data = data else {
+                print("ERROR \(String(describing: error?.localizedDescription))")
+                return
+            }
             self.products.append(contentsOf: data)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -114,7 +136,12 @@ extension ViewController: UITableViewDataSource{
         let lastRow = Int(ceil(Double(products.count/2)))
         if indexPath.row == lastRow - 1{
             currentPage += 1
-            fetchProducts(forPage: currentPage)
+            if (isOnSale){
+                fetchOnSaleProducts(forPage: currentPage)
+            }else{
+                fetchProducts(forPage: currentPage)
+            }
+            
         }
     }
 }

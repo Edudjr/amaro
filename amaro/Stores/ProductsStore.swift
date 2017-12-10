@@ -111,7 +111,6 @@ class ProductsStore {
             if lastIndex > productList.count {
                 lastIndex = productList.count
             }
-            
             if offset < productList.count {
                 productList = Array(productList[offset..<lastIndex])
             }else{

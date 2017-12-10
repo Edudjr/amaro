@@ -58,6 +58,7 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <state key="normal" image="sale"/>
+                                    <state key="selected" image="saleSelected"/>
                                 </button>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </barButtonItem>
@@ -284,5 +285,6 @@
     <resources>
         <image name="cart" width="25" height="25"/>
         <image name="sale" width="25" height="25"/>
+        <image name="saleSelected" width="25" height="25"/>
     </resources>
 </document>
