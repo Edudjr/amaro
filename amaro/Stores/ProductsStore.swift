@@ -63,8 +63,13 @@ class ProductsStore {
             
             //fake pagination
             let offset = (page-1) * self.perPage
+            var lastIndex = offset + self.perPage
+            
+            if lastIndex > productList.count {
+                lastIndex = productList.count
+            }
             if offset < productList.count {
-                productList = Array(productList[offset...])
+                productList = Array(productList[offset..<lastIndex])
             }else{
                 completion(nil, ProductsError.notFound)
                 return
@@ -101,8 +106,13 @@ class ProductsStore {
             
             //fake pagination
             let offset = (page-1) * self.perPage
+            var lastIndex = offset + self.perPage
+            
+            if lastIndex > productList.count {
+                lastIndex = productList.count
+            }
             if offset < productList.count {
-                productList = Array(productList[offset...])
+                productList = Array(productList[offset..<lastIndex])
             }else{
                 completion(nil, ProductsError.notFound)
                 return

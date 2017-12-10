@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ShoppingCartItemModel {
-    var product: ProductModel
-    var quantity: Int
+class ShoppingCartItemModel : NSObject{
+    var product: ProductModel?
+    var quantity: Int?
 }

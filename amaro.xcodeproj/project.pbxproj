@@ -37,6 +37,12 @@
 		93102D1E1FDC5F910073B2D1 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102D1C1FDC5F910073B2D1 /* String+Extension.swift */; };
 		93102D201FDC63A70073B2D1 /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102D1F1FDC63A70073B2D1 /* Decimal+Extension.swift */; };
 		93102D211FDC63A70073B2D1 /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102D1F1FDC63A70073B2D1 /* Decimal+Extension.swift */; };
+		93102D281FDC8FE50073B2D1 /* CustomTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102D261FDC8FE50073B2D1 /* CustomTableViewCellController.swift */; };
+		93102D291FDC8FE50073B2D1 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93102D271FDC8FE50073B2D1 /* CustomTableViewCell.xib */; };
+		93102D2B1FDC9CD90073B2D1 /* ItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93102D2A1FDC9CD90073B2D1 /* ItemView.xib */; };
+		93102D2D1FDC9DB50073B2D1 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93102D2C1FDC9DB50073B2D1 /* ItemViewController.swift */; };
+		93C45B501FDD48E000D9E8EC /* CartTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C45B4F1FDD48E000D9E8EC /* CartTableViewCellController.swift */; };
+		93C45B541FDD4C6600D9E8EC /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C45B531FDD4C6600D9E8EC /* CartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,12 @@
 		93102D181FDC524D0073B2D1 /* ShoppingCartItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartItemModel.swift; sourceTree = "<group>"; };
 		93102D1C1FDC5F910073B2D1 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		93102D1F1FDC63A70073B2D1 /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
+		93102D261FDC8FE50073B2D1 /* CustomTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCellController.swift; sourceTree = "<group>"; };
+		93102D271FDC8FE50073B2D1 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		93102D2A1FDC9CD90073B2D1 /* ItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemView.xib; sourceTree = "<group>"; };
+		93102D2C1FDC9DB50073B2D1 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		93C45B4F1FDD48E000D9E8EC /* CartTableViewCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCellController.swift; sourceTree = "<group>"; };
+		93C45B531FDD4C6600D9E8EC /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		9B1C72C356B663F10025D001 /* Pods_amaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amaro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11017D730BF65BFED2B7E73 /* Pods_amaroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amaroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -177,7 +189,11 @@
 		93102CFD1FDB952E0073B2D1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				93102D261FDC8FE50073B2D1 /* CustomTableViewCellController.swift */,
 				93102CD01FDB896B0073B2D1 /* ViewController.swift */,
+				93102D2C1FDC9DB50073B2D1 /* ItemViewController.swift */,
+				93C45B4F1FDD48E000D9E8EC /* CartTableViewCellController.swift */,
+				93C45B531FDD4C6600D9E8EC /* CartViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +203,8 @@
 			children = (
 				93102CD71FDB896B0073B2D1 /* LaunchScreen.storyboard */,
 				93102CD21FDB896B0073B2D1 /* Main.storyboard */,
+				93102D271FDC8FE50073B2D1 /* CustomTableViewCell.xib */,
+				93102D2A1FDC9CD90073B2D1 /* ItemView.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -311,6 +329,8 @@
 			files = (
 				93102CD91FDB896B0073B2D1 /* LaunchScreen.storyboard in Resources */,
 				93102CF31FDB8FFC0073B2D1 /* products.json in Resources */,
+				93102D291FDC8FE50073B2D1 /* CustomTableViewCell.xib in Resources */,
+				93102D2B1FDC9CD90073B2D1 /* ItemView.xib in Resources */,
 				93102CD61FDB896B0073B2D1 /* Assets.xcassets in Resources */,
 				93102CD41FDB896B0073B2D1 /* Main.storyboard in Resources */,
 			);
@@ -349,10 +369,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-amaro/Pods-amaro-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Marshal/Marshal.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marshal.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,11 +462,15 @@
 				93102CFB1FDB93730073B2D1 /* ProductsError.swift in Sources */,
 				93102D201FDC63A70073B2D1 /* Decimal+Extension.swift in Sources */,
 				93102CD11FDB896B0073B2D1 /* ViewController.swift in Sources */,
+				93102D2D1FDC9DB50073B2D1 /* ItemViewController.swift in Sources */,
 				93102D161FDC4EA90073B2D1 /* ShoppingCartSingleton.swift in Sources */,
 				93102CCF1FDB896B0073B2D1 /* AppDelegate.swift in Sources */,
 				93102D0A1FDB9F950073B2D1 /* LoadFiles.swift in Sources */,
+				93C45B501FDD48E000D9E8EC /* CartTableViewCellController.swift in Sources */,
+				93C45B541FDD4C6600D9E8EC /* CartViewController.swift in Sources */,
 				93102CF71FDB92380073B2D1 /* ProductsStore.swift in Sources */,
 				93102D011FDB98DB0073B2D1 /* ProductModel.swift in Sources */,
+				93102D281FDC8FE50073B2D1 /* CustomTableViewCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
