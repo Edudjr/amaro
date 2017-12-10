@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var products = [ProductModel]()
+    var currentPage = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
                 return
             }
             
-            self.products = data
+            self.products.append(contentsOf: data)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -61,6 +62,7 @@ class ViewController: UIViewController {
     }
 }
 
+//MARK: UITableViewDataSource
 extension ViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCellIdentifier", for: indexPath) as!
@@ -82,8 +84,19 @@ extension ViewController: UITableViewDataSource{
         result = ceil(result)
         return Int(result)
     }
+    
+    //Infinite scroll
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastRow = Int(ceil(Double(products.count/2)))
+        if indexPath.row == lastRow - 1{
+            currentPage += 1
+            fetchProducts(forPage: currentPage)
+        }
+    }
 }
 
+
+//MARK: UITableViewDelegate
 extension ViewController: UITableViewDelegate{
     
 }
