@@ -28,6 +28,7 @@ class ItemViewController: UIView {
     @IBOutlet weak var actualPriceLabel: UILabel!
     @IBOutlet weak var installmentsLabel: UILabel!
     @IBOutlet weak var cartButton: UIButton!
+    @IBOutlet weak var sizeLabel: UILabel!
     
     let nibName : String? = "ItemView"
     var product: ProductModel?

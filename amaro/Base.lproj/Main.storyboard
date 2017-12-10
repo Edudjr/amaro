@@ -124,7 +124,6 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsD-06-oAQ">
                                                     <rect key="frame" x="327" y="21" width="30" height="30"/>
-                                                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="mHw-12-adX"/>
                                                         <constraint firstAttribute="width" constant="30" id="zbp-UF-0YW"/>
@@ -137,7 +136,6 @@
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYo-Il-PuB">
                                                     <rect key="frame" x="327" y="54" width="30" height="30"/>
-                                                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="79E-So-Q5e"/>
                                                         <constraint firstAttribute="height" constant="30" id="Hbr-40-mWG"/>

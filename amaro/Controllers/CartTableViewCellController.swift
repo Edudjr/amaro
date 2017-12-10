@@ -23,6 +23,13 @@ class CartTableViewCellController: UITableViewCell{
     var delegate: CartTableViewCellControllerDelegate?
     var item: ShoppingCartItemModel?
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        plusButton.layer.cornerRadius = plusButton.frame.height/2
+        minusButton.layer.cornerRadius = minusButton.frame.height/2
+    }
+    
     @IBAction func clickAtPlus(_ sender: UIButton) {
         self.delegate?.didClickAtPlus(item)
     }

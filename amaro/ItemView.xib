@@ -22,6 +22,7 @@
                 <outlet property="priceLabel" destination="4Is-9G-yhK" id="wqT-RG-9rq"/>
                 <outlet property="saleLabel" destination="06y-v7-H5X" id="Q6a-aH-waI"/>
                 <outlet property="saleView" destination="j83-RZ-O0m" id="spG-H1-wWu"/>
+                <outlet property="sizeLabel" destination="nTc-Bt-mxp" id="Hbs-DA-AJ0"/>
                 <outlet property="unavailableView" destination="F20-Pf-Bff" id="Cye-Im-sky"/>
             </connections>
         </placeholder>
@@ -40,21 +41,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="190.5" height="249"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHZ-dY-Lds" userLabel="SizeView">
-                                    <rect key="frame" x="0.0" y="225" width="25" height="25"/>
+                                    <rect key="frame" x="0.0" y="235" width="15.5" height="15"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTc-Bt-mxp">
-                                            <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="15.5" height="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19831095950704225" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" constant="25" id="2Ik-wa-3Wn"/>
                                         <constraint firstAttribute="bottom" secondItem="nTc-Bt-mxp" secondAttribute="bottom" id="8Wf-HS-ex0"/>
                                         <constraint firstAttribute="trailing" secondItem="nTc-Bt-mxp" secondAttribute="trailing" id="IKe-La-oiQ"/>
-                                        <constraint firstAttribute="height" constant="25" id="OB8-BY-e9a"/>
+                                        <constraint firstAttribute="height" constant="15" id="OB8-BY-e9a"/>
                                         <constraint firstItem="nTc-Bt-mxp" firstAttribute="top" secondItem="ZHZ-dY-Lds" secondAttribute="top" id="log-ad-UWe"/>
                                         <constraint firstItem="nTc-Bt-mxp" firstAttribute="leading" secondItem="ZHZ-dY-Lds" secondAttribute="leading" id="tBo-Qw-oQh"/>
                                     </constraints>
@@ -146,9 +146,10 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cartAdd" translatesAutoresizingMaskIntoConstraints="NO" id="MDl-In-VFq">
                                     <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRg-FN-BAg">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRg-FN-BAg">
                                     <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                    <state key="normal" title="Button"/>
+                                    <state key="normal" title="Button" image="cartAdd"/>
+                                    <state key="highlighted" image="cartAddSelected"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -206,5 +207,6 @@
     </objects>
     <resources>
         <image name="cartAdd" width="128" height="128"/>
+        <image name="cartAddSelected" width="128" height="128"/>
     </resources>
 </document>

@@ -106,6 +106,19 @@ class ViewController: UIViewController {
         }else{
             item.unavailableView.isHidden = false
         }
+        
+        //Setup sizes
+        var strSizes = ""
+        if let sizes = product.sizes {
+            for s in sizes {
+                if let size = s.size, s.available == true {
+                    strSizes += " \(size) |"
+                }
+            }
+        }
+        let index = strSizes.index(strSizes.endIndex, offsetBy: -1)
+        strSizes = String(strSizes.prefix(upTo: index)) + " "
+        item.sizeLabel.text = strSizes
     }
 }
 
