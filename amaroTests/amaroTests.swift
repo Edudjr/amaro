@@ -149,9 +149,9 @@ class amaroTests: XCTestCase {
         let count = items.count
 
         XCTAssertEqual(count, 2)
-        XCTAssertEqual(items[0].product.name, "VESTIDO")
+        XCTAssertEqual(items[0].product?.name, "VESTIDO")
         XCTAssertEqual(items[0].quantity, 1)
-        XCTAssertEqual(items[1].product.name, "REGATA")
+        XCTAssertEqual(items[1].product?.name, "REGATA")
         XCTAssertEqual(items[1].quantity, 1)
     }
     
@@ -167,7 +167,7 @@ class amaroTests: XCTestCase {
         let count = items.count
         
         XCTAssertEqual(count, 1)
-        XCTAssertEqual(items[0].product.name, "VESTIDO")
+        XCTAssertEqual(items[0].product?.name, "VESTIDO")
         XCTAssertEqual(items[0].quantity, 2)
     }
     

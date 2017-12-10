@@ -17,18 +17,20 @@ class ShoppingCartSingleton {
     
     // Assuming that "name" is a unique identifier
     public func addProductToCart(_ product: ProductModel){
-        if let index = items.index(where: {$0.product.name == product.name}) {
-            items[index].quantity += 1
+        if let index = items.index(where: {$0.product?.name == product.name}), var quantity = items[index].quantity{
+            items[index].quantity = quantity + 1
         } else {
-            let item = ShoppingCartItemModel(product: product, quantity: 1)
+            let item = ShoppingCartItemModel()
+            item.product = product
+            item.quantity = 1
             items.append(item)
         }
     }
     
     // Assuming that "name" is a unique identifier
     public func removeProductFromCart(_ product: ProductModel){
-        if let index = items.index(where: {$0.product.name == product.name}) {
-            items[index].quantity -= 1
+        if let index = items.index(where: {$0.product?.name == product.name}), let quantity = items[index].quantity{
+            items[index].quantity = quantity - 1
             if (items[index].quantity == 0){
                 items.remove(at: index)
             }
@@ -46,10 +48,10 @@ class ShoppingCartSingleton {
     public func getTotalAmount() throws -> Decimal{
         var total = Decimal()
         for item in items {
-            guard let price = item.product.actualPrice?.currencyToDecimal else{
-                throw ProductsError.convertionError(fromString: item.product.actualPrice, toType: "decimal")
+            guard let price = item.product?.actualPrice?.currencyToDecimal else{
+                throw ProductsError.convertionError(fromString: item.product!.actualPrice, toType: "decimal")
             }
-            let finalPrice = price * Decimal(item.quantity)
+            let finalPrice = price * Decimal(item.quantity!)
             total += finalPrice
         }
         return total
