@@ -70,18 +70,21 @@ class amaroTests: XCTestCase {
             XCTAssertNil(error, "Error should be nil")
             XCTAssertNotNil(data, "Data should not be nil")
             XCTAssertTrue((data as Any) is [ProductModel], "data is not array of ProductModel")
+            XCTAssertEqual(data?.count, 10)
             expectation1.fulfill()
         }
         ProductsStore.sharedInstance.getProducts(page: 2) { (data, error) in
             XCTAssertNil(error, "Error should be nil")
             XCTAssertNotNil(data, "Data should not be nil")
             XCTAssertTrue((data as Any) is [ProductModel], "data is not array of ProductModel")
+            XCTAssertEqual(data?.count, 10)
             expectation2.fulfill()
         }
         ProductsStore.sharedInstance.getProducts(page: 3) { (data, error) in
             XCTAssertNil(error, "Error should be nil")
             XCTAssertNotNil(data, "Data should not be nil")
             XCTAssertTrue((data as Any) is [ProductModel], "data is not array of ProductModel")
+            XCTAssertEqual(data?.count, 2)
             expectation3.fulfill()
         }
         

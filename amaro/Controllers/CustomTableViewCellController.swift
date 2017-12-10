@@ -9,7 +9,9 @@
 import UIKit
 
 class CustomTableViewCellController: UITableViewCell {
-
+    @IBOutlet weak var item1: ItemViewController!
+    @IBOutlet weak var item2: ItemViewController!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

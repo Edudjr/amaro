@@ -12,14 +12,16 @@ import UIKit
 @IBDesignable
 class ItemViewController: UIView {
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var innerContentView: UIView!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var unavailableView: UIView!
+    @IBOutlet weak var saleView: UIView!
     let nibName : String? = "ItemView"
-    
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//        UINib(nibName: "ItemView", bundle: nil).instantiate(withOwner: self, options: nil)
-//        contentView.frame = self.bounds
-//        addSubview(contentView)
-//    }
+    @IBOutlet weak var saleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var actualPriceLabel: UILabel!
+    @IBOutlet weak var installmentsLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,8 +40,9 @@ class ItemViewController: UIView {
         }
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        addSubview(view)
         contentView = view
+        //setupBorder()
+        addSubview(view)
     }
     
     func loadViewFromNib() -> UIView? {
@@ -49,5 +52,9 @@ class ItemViewController: UIView {
         return nib.instantiate(
             withOwner: self,
             options: nil).first as? UIView
+    }
+    
+    func setupBorder(){
+        innerContentView.layer.cornerRadius = 10
     }
 }
