@@ -1,0 +1,6 @@
+framework module Pods_amaro {
+  umbrella header "Pods-amaro-umbrella.h"
+
+  export *
+  module * { export * }
+}
