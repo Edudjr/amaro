@@ -3,7 +3,7 @@ use_frameworks!
 
 target 'amaro' do
     pod 'Marshal', '~> 1.2'
-    pod 'Kingfisher', '~> 4.5'
+    pod 'Kingfisher', '~> 4.0'
     
     target 'amaroTests' do
         inherit! :search_paths
